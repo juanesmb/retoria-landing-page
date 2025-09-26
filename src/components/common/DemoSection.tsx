@@ -99,7 +99,7 @@ export default function DemoSection({ className = "" }: DemoSectionProps) {
                         </div>
                         <h3 className="text-lg font-semibold text-gray-900">You already registered!</h3>
                         <p className="text-gray-600 text-sm">
-                            This email is already registered for our demo. We'll send you access details shortly.
+                            This email is already registered for our demo. We&apos;ll send you access details shortly.
                         </p>
                         <button
                             onClick={resetForm}
@@ -117,7 +117,7 @@ export default function DemoSection({ className = "" }: DemoSectionProps) {
                         </div>
                         <h3 className="text-lg font-semibold text-gray-900">Email Received!</h3>
                         <p className="text-gray-600 text-sm">
-                            Thanks for your interest. We'll send you access details shortly.
+                            Thanks for your interest. We&apos;ll send you access details shortly.
                         </p>
                         <button
                             onClick={resetForm}

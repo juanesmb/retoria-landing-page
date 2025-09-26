@@ -28,8 +28,9 @@ export async function POST(request: Request) {
     if (error) {
       // Unique violation handling
       const message = String(error.message || "");
+      const errorWithCode = error as { code?: string };
       const isDuplicate = message.toLowerCase().includes("duplicate") ||
-        (error as any).code === "23505";
+        errorWithCode.code === "23505";
       if (isDuplicate) {
         return NextResponse.json(
           { code: "DUPLICATE_EMAIL", isDuplicate: true },

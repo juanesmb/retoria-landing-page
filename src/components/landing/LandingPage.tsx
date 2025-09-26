@@ -31,20 +31,20 @@ export default function LandingPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-6">
               <h2 className="text-3xl font-bold text-gray-900">
-                Great speeches don't just happen. 
+                Great speeches don&apos;t just happen. 
                 <br />
                 They are 
                 <span className="text-indigo-600"> build. </span>
               </h2>
               <div className="space-y-4 text-lg text-gray-600 max-w-3xl mx-auto">
                 <p className="italic">
-                  "Get inspired, craft your lines, and practice with AI-powered roleplay. 
+                  &quot;Get inspired, craft your lines, and practice with AI-powered roleplay. 
                   Then, receive instant, personalized feedback to level up fast.
                 </p>
                 <p className="italic">
                   Retoria adapts to your style and goals—whether you need sharper delivery, stronger storytelling, or more persuasive impact. 
                   From writing to practice to performance, it helps you grow in every dimension of public speaking, so every time you step up, 
-                  you sound sharp, confident, and unforgettable."
+                  you sound sharp, confident, and unforgettable.&quot;
                 </p>
               </div>
             </div>
