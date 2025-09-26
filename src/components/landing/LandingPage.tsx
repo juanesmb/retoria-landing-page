@@ -242,7 +242,7 @@ export default function LandingPage() {
         <div className="mt-20">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Speaking?</h2>
-            <p className="text-gray-600">Join thousands of professionals who've improved their public speaking with Retoria</p>
+            <p className="text-gray-600">Join thousands of professionals who&apos;ve improved their public speaking with Retoria</p>
           </div>
           <DemoSection />
         </div>
