@@ -1,13 +1,11 @@
 "use client";
 
 import DemoSection from "@/components/common/DemoSection";
-import AppHeader from "@/components/layout/AppHeader";
 import AppFooter from "@/components/layout/AppFooter";
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <AppHeader />
       <div className="mx-auto max-w-6xl px-6 py-16">
         {/* Hero Section */}
         <div className="text-center space-y-8">
