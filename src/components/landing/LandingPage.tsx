@@ -6,7 +6,7 @@ import WhoWeServe from "@/components/landing/WhoWeServe";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-white">
       <div className="mx-auto max-w-6xl px-6 py-10">
         {/* Who We Serve */}
         <div>
@@ -244,13 +244,17 @@ export default function LandingPage() {
 
       </div>
 
-        {/* Final Demo Section (full-bleed) */}
+      {/* Final Demo Section (full-bleed) */}
       <div className="mt-10 bg-indigo-600 text-white">
           <div className="text-center py-12">
-            <h2 className="text-5xl font-bold text-white mb-4">Ready to Level-Up Your Delivery?</h2>
+            <h2 className="text-5xl font-bold text-white mb-4 mt-15">Ready to Level-Up Your Delivery?</h2>
             <p className="text-indigo-100">Schedule a demo with our team today!</p>
             <DemoSection variant="indigo" className="py-6" />
           </div>
+          {/* Curved white divider */}
+          <svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" className="block w-full h-8 md:h-12 lg:h-30 text-white">
+              <path fill="currentColor" d="M0 0 Q 720 140 1440 0 V80 H0 Z" />
+          </svg>
       </div>
 
       <AppFooter />
