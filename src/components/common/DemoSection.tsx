@@ -4,9 +4,10 @@ import { useState } from "react";
 
 interface DemoSectionProps {
     className?: string;
+    variant?: "light" | "indigo"; // indigo matches a dark indigo-600 section background
 }
 
-export default function DemoSection({ className = "" }: DemoSectionProps) {
+export default function DemoSection({ className = "", variant = "light" }: DemoSectionProps) {
     const [email, setEmail] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -62,13 +63,30 @@ export default function DemoSection({ className = "" }: DemoSectionProps) {
         setEmail("");
     };
 
+    const isIndigo = variant === "indigo";
+
+    const containerClasses = isIndigo
+        ? `bg-transparent rounded-none shadow-none p-8 max-w-xl mx-auto ${className}`
+        : `bg-gradient-to-r from-indigo-50 to-blue-80 rounded-2xl shadow-xl p-6 max-w-xl mx-auto ${className}`;
+
+    const subtleText = isIndigo ? "text-indigo-100" : "text-gray-600";
+    const strongText = isIndigo ? "text-white" : "text-gray-900";
+    const linkText = isIndigo ? "text-white underline" : "text-indigo-600 hover:text-indigo-700";
+    const inputClasses = isIndigo
+        ? "w-full px-3 py-2 border border-transparent rounded-lg focus:ring-2 focus:ring-white focus:border-transparent text-sm bg-white text-gray-900 placeholder:text-gray-500"
+        : "w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm bg-white text-gray-900 placeholder:text-gray-500";
+    const buttonClasses = isIndigo
+        ? "w-full bg-white text-indigo-700 py-2 px-4 rounded-lg font-semibold hover:bg-indigo-50 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+        : "w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm";
+
     return (
-        <div className={`bg-white rounded-xl shadow-lg p-6 max-w-xl mx-auto ${className}`}>
+        <div className={containerClasses}>
             <div className="text-center space-y-4">
-                <h2 className="text-2xl font-bold text-gray-900">Try Demo</h2>
-                <p className="text-gray-600 text-sm">
-                    Experience AI-powered speech coaching firsthand.
-                </p>
+                {!isIndigo && (
+                    <p className={`${subtleText} text-sm`}>
+                        Experience AI-powered speech coaching firsthand.
+                    </p>
+                )}
 
                 {!isSubmitted && !isDuplicate ? (
                     <form onSubmit={handleDemoSubmit} className="space-y-3">
@@ -79,15 +97,15 @@ export default function DemoSection({ className = "" }: DemoSectionProps) {
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="Enter your email address"
                                 required
-                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm bg-white text-gray-900 placeholder:text-gray-500"
+                                className={inputClasses}
                             />
                         </div>
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                            className={buttonClasses}
                         >
-                            {isLoading ? "Starting..." : "Try Demo"}
+                            {isLoading ? "Starting..." : "Book a Demo"}
                         </button>
                     </form>
                 ) : isDuplicate ? (
@@ -97,13 +115,13 @@ export default function DemoSection({ className = "" }: DemoSectionProps) {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
                             </svg>
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-900">You already registered!</h3>
-                        <p className="text-gray-600 text-sm">
+                        <h3 className={`text-lg font-semibold ${strongText}`}>You already registered!</h3>
+                        <p className={`${subtleText} text-sm`}>
                             This email is already registered for our demo. We&apos;ll send you access details shortly.
                         </p>
                         <button
                             onClick={resetForm}
-                            className="text-indigo-600 hover:text-indigo-700 font-medium text-sm"
+                            className={`${linkText} font-medium text-sm`}
                         >
                             Try with a different email
                         </button>
@@ -115,13 +133,13 @@ export default function DemoSection({ className = "" }: DemoSectionProps) {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                             </svg>
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-900">Email Received!</h3>
-                        <p className="text-gray-600 text-sm">
+                        <h3 className={`text-lg font-semibold ${strongText}`}>Email Received!</h3>
+                        <p className={`${subtleText} text-sm`}>
                             Thanks for your interest. We&apos;ll send you access details shortly.
                         </p>
                         <button
                             onClick={resetForm}
-                            className="text-indigo-600 hover:text-indigo-700 font-medium text-sm"
+                            className={`${linkText} font-medium text-sm`}
                         >
                             Try with a different email
                         </button>

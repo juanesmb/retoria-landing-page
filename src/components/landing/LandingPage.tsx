@@ -2,46 +2,52 @@
 
 import DemoSection from "@/components/common/DemoSection";
 import AppFooter from "@/components/layout/AppFooter";
+import WhoWeServe from "@/components/landing/WhoWeServe";
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="mx-auto max-w-6xl px-6 py-16">
+      <div className="mx-auto max-w-6xl px-6 py-10">
+        {/* Who We Serve */}
+        <div>
+           <WhoWeServe />
+        </div>
+
         {/* Hero Section */}
-        <div className="text-center space-y-8">
+        <div className="text-center space-y-8 mt-10">
           <h1 className="text-5xl font-bold text-gray-900 sm:text-6xl">
             <span className="text-indigo-600">Master Your Voice,</span>
             <br />
             Command the Room
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your all-in-one AI speech coach — from idea to impact.
+            Your all-in-one AI speech coach. From idea to impact.
             <br />
             Plan, write, practice, and deliver with confidence.
           </p>
         </div>
 
         {/* Demo Section */}
-        <DemoSection className="mt-16" />
+        <DemoSection className="mt-10" />
 
         {/* Transform Section */}
-        <div className="mt-20 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-12 transition-transform duration-300 hover:scale-105">
+        <div className="mt-20 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-12 transition-transform duration-300 hover:scale-105">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-6">
               <h2 className="text-3xl font-bold text-gray-900">
-                Great speeches don&apos;t just happen. 
+                Great speeches don&apos;t just happen.
                 <br />
-                They are 
+                They are
                 <span className="text-indigo-600"> build. </span>
               </h2>
               <div className="space-y-4 text-lg text-gray-600 max-w-3xl mx-auto">
                 <p className="italic">
-                  &quot;Get inspired, craft your lines, and practice with AI-powered roleplay. 
+                  &quot;Get inspired, craft your lines, and practice with AI-powered roleplay.
                   Then, receive instant, personalized feedback to level up fast.
                 </p>
                 <p className="italic">
-                  Retoria adapts to your style and goals—whether you need sharper delivery, stronger storytelling, or more persuasive impact. 
-                  From writing to practice to performance, it helps you grow in every dimension of public speaking, so every time you step up, 
+                  Retoria adapts to your style and goals—whether you need sharper delivery, stronger storytelling, or more persuasive impact.
+                  From writing to practice to performance, it helps you grow in every dimension of public speaking, so every time you step up,
                   you sound sharp, confident, and unforgettable.&quot;
                 </p>
               </div>
@@ -50,7 +56,7 @@ export default function LandingPage() {
         </div>
 
         {/* Features Section */}
-        <div className="mt-20 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-12">
+        <div className="mt-20 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Enter Retoria:
@@ -113,7 +119,7 @@ export default function LandingPage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 font-medium text-gray-900">End-to-End Coaching</td>
+                  <td className="py-4 px-6 font-medium text-gray-600">End-to-End Coaching</td>
                   <td className="py-4 px-6">
                     <span className="flex items-center text-indigo-600">
                       <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -133,7 +139,7 @@ export default function LandingPage() {
                 </tr>
 
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 font-medium text-gray-900">AI Roleplay Scenarios</td>
+                  <td className="py-4 px-6 font-medium text-gray-600">AI Roleplay Scenarios</td>
                   <td className="py-4 px-6">
                     <span className="flex items-center text-indigo-600">
                       <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -153,7 +159,7 @@ export default function LandingPage() {
                 </tr>
 
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 font-medium text-gray-900">Feedback Depth</td>
+                  <td className="py-4 px-6 font-medium text-gray-600">Feedback Depth</td>
                   <td className="py-4 px-6">
                     <span className="flex items-center text-indigo-600">
                       <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -173,7 +179,7 @@ export default function LandingPage() {
                 </tr>
 
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 font-medium text-gray-900">Speechwriting Support</td>
+                  <td className="py-4 px-6 font-medium text-gray-600">Speechwriting Support</td>
                   <td className="py-4 px-6">
                     <span className="flex items-center text-indigo-600">
                       <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -193,7 +199,7 @@ export default function LandingPage() {
                 </tr>
 
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 font-medium text-gray-900">Confidence Tools</td>
+                  <td className="py-4 px-6 font-medium text-gray-600">Confidence Tools</td>
                   <td className="py-4 px-6">
                     <span className="flex items-center text-indigo-600">
                       <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -213,7 +219,7 @@ export default function LandingPage() {
                 </tr>
 
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 font-medium text-gray-900">Multi-Channel Training</td>
+                  <td className="py-4 px-6 font-medium text-gray-600">Multi-Channel Training</td>
                   <td className="py-4 px-6">
                     <span className="flex items-center text-indigo-600">
                       <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -236,15 +242,17 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* Final Demo Section */}
-        <div className="mt-20">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Speaking?</h2>
-            <p className="text-gray-600">Join thousands of professionals who&apos;ve improved their public speaking with Retoria</p>
-          </div>
-          <DemoSection />
-        </div>
       </div>
+
+        {/* Final Demo Section (full-bleed) */}
+      <div className="mt-10 bg-indigo-600 text-white">
+          <div className="text-center py-12">
+            <h2 className="text-5xl font-bold text-white mb-4">Ready to Level-Up Your Delivery?</h2>
+            <p className="text-indigo-100">Schedule a demo with our team today!</p>
+            <DemoSection variant="indigo" className="py-6" />
+          </div>
+      </div>
+
       <AppFooter />
     </div>
   );
