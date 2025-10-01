@@ -4,8 +4,53 @@ import DemoSection from "@/components/common/DemoSection";
 import AppFooter from "@/components/layout/AppFooter";
 import WhoWeServe from "@/components/landing/WhoWeServe";
 import SpeechAnalysisSection from "@/components/landing/SpeechAnalysisSection";
+import FeatureCard from "@/components/landing/FeatureCard";
+import { FEATURES, type FeatureItem } from "@/lib/constants";
 
 export default function LandingPage() {
+  const iconFor = (key: FeatureItem["iconKey"]) => {
+    switch (key) {
+      case "edit":
+        return (
+          <svg className="w-8 h-8" style={{ color: "#0f37e6" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+        );
+      case "users":
+        return (
+          <svg className="w-8 h-8" style={{ color: "#0f37e6" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        );
+      case "bolt":
+        return (
+          <svg className="w-8 h-8" style={{ color: "#0f37e6" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        );
+      case "clock":
+        return (
+          <svg className="w-8 h-8" style={{ color: "#0f37e6" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        );
+      case "checkchart":
+        return (
+          <svg className="w-8 h-8" style={{ color: "#0f37e6" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3v18h18M7 15l4-4 3 3 5-5" />
+          </svg>
+        );
+      case "megaphone":
+        return (
+          <svg className="w-8 h-8" style={{ color: "#0f37e6" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6l7 4v3a10 10 0 11-14 0V10l7-4zm0 0v8" />
+          </svg>
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <div className="mx-auto max-w-6xl px-6 py-10">
@@ -56,7 +101,7 @@ export default function LandingPage() {
 
         {/* Features Section */}
         <div className="mt-20 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-12">
-          <div className="text-center mb-12">
+          <div className="text-center mb-5">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Enter Retoria:
               <span style={{ color: "#0f37e6" }}> Your AI Speech Coach </span>
@@ -64,35 +109,14 @@ export default function LandingPage() {
             <p className="text-gray-600">Discover the features that make Retoria the ultimate speech coaching platform</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-8 text-center space-y-4 transition-transform duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto">
-                <svg className="w-8 h-8"  style={{ color: "#0f37e6" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900">Speechwriting Guidance</h3>
-              <p className="text-gray-600">Get AI-powered help crafting compelling content with structure, persuasion techniques, and storytelling elements.</p>
-            </div>
-
-            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-8 text-center space-y-4 transition-transform duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto">
-                <svg className="w-8 h-8" style={{ color: "#0f37e6" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900">Interactive AI Roleplays</h3>
-              <p className="text-gray-600">Practice with AI-powered scenarios and conversations to build confidence and refine your delivery in realistic situations.</p>
-            </div>
-
-            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl p-8 text-center space-y-4 transition-transform duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto">
-                <svg className="w-8 h-8" style={{ color: "#0f37e6" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900">Instant Feedback</h3>
-              <p className="text-gray-600">Get real-time analysis on your speech delivery, pacing, and presentation skills as you practice.</p>
-            </div>
+            {FEATURES.map((feature) => (
+              <FeatureCard
+                key={feature.title}
+                icon={iconFor(feature.iconKey)}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
           </div>
         </div>
       </div>
