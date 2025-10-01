@@ -3,6 +3,7 @@
 import DemoSection from "@/components/common/DemoSection";
 import AppFooter from "@/components/layout/AppFooter";
 import WhoWeServe from "@/components/landing/WhoWeServe";
+import SpeechAnalysisSection from "@/components/landing/SpeechAnalysisSection";
 
 export default function LandingPage() {
   return (
@@ -21,9 +22,7 @@ export default function LandingPage() {
             Command the Room
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your all-in-one AI speech coach. From idea to impact.
-            <br />
-            Plan, write, practice, and deliver with confidence.
+            Your all-in-one AI speech coach. From idea to delivery.
           </p>
         </div>
 
@@ -96,9 +95,16 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+      </div>
 
+        {/* Speech Analysis Animated Section (full-bleed) */}
+        <div className="rounded-2xl mx-5 my-2 overflow-hidden shadow-xl">
+          <SpeechAnalysisSection />
+        </div>
+
+        <div className="mx-auto max-w-6xl px-6 py-10">
         {/* Comparison Table Section */}
-        <div className="mt-20 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-8 max-w-6xl mx-auto transition-transform duration-300 hover:scale-105">
+        <div className="mt-5 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-8 max-w-6xl mx-auto transition-transform duration-300 hover:scale-105">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Why
