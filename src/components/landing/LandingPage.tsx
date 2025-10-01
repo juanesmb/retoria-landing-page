@@ -82,7 +82,7 @@ export default function LandingPage() {
                 Great speeches don&apos;t just happen.
                 <br />
                 They are
-                <span style={{ color: "#0f37e6" }}> build. </span>
+                <span style={{ color: "#0f37e6" }}> built. </span>
               </h2>
               <div className="space-y-4 text-lg text-gray-600 max-w-3xl mx-auto">
                 <p className="italic">
