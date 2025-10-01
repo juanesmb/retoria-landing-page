@@ -38,7 +38,10 @@ export default function WhoWeServe() {
 
   return (
     <div className="relative w-full">
-      <div className="rounded-full bg-indigo-600 ring-1 ring-indigo-600">
+      <div
+        className="rounded-full"
+        style={{ backgroundColor: "#0f37e6", border: "1px solid #0f37e6" }}
+      >
         <div className="text-center text-base sm:text-lg text-white leading-relaxed min-h-[2.5rem] flex items-center justify-center">
           <span className={"transition-all duration-300 ease-out " + transitionClasses}>
             <span className="mr-2" aria-hidden>{archetypes[index].emoji}</span>

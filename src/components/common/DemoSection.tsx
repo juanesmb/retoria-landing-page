@@ -71,13 +71,13 @@ export default function DemoSection({ className = "", variant = "light" }: DemoS
 
     const subtleText = isIndigo ? "text-indigo-100" : "text-gray-600";
     const strongText = isIndigo ? "text-white" : "text-gray-900";
-    const linkText = isIndigo ? "text-white underline" : "text-indigo-600 hover:text-indigo-700";
+    const linkText = isIndigo ? "text-white underline" : "text-[#0f37e6] hover:text-indigo-700";
     const inputClasses = isIndigo
         ? "w-full px-3 py-2 border border-transparent rounded-lg focus:ring-2 focus:ring-white focus:border-transparent text-sm bg-white text-gray-900 placeholder:text-gray-500"
         : "w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm bg-white text-gray-900 placeholder:text-gray-500";
     const buttonClasses = isIndigo
-        ? "w-full bg-white text-indigo-700 py-2 px-4 rounded-lg font-semibold hover:bg-indigo-50 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
-        : "w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm";
+        ? "w-full bg-white text-[#0f37e6] py-2 px-4 rounded-lg font-semibold hover:bg-indigo-50 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+        : "w-full bg-[#0f37e6] text-white py-2 px-4 rounded-lg font-semibold hover:opacity-90 focus:ring-2 focus:ring-[#0f37e6] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm";
 
     return (
         <div className={containerClasses}>
