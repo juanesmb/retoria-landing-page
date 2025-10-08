@@ -1,0 +1,23 @@
+---
+description: General rules for coding
+alwaysApply: false
+---
+
+### Coding Environment
+- ReactJS
+- NextJS
+- NodeJS
+- TypeScript
+- TailwindCSS
+
+### Code Implementation Guidelines
+Follow these rules when you write code:
+- Use early returns whenever possible to make the code more readable.
+- Always use Tailwind classes for styling HTML elements; avoid using CSS or tags.
+- Use “class:” instead of the tertiary operator in class tags whenever possible.
+- Use descriptive variable and function/const names.
+- Implement reusable component code. Use secondary private functions.
+- Implement and suggest design patterns and high quality architectures whenever possible.
+- Implement accessibility features on elements. For example, a tag should have a tabindex=“0”, aria-label, on:click, and on:keydown, and similar attributes.
+- Use constants instead of functions, for example, “const toggle = () =>”. Also, define a type if possible.
+- Implement responsive UIs
