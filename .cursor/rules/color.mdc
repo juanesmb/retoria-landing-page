@@ -1,0 +1,209 @@
+---
+description: Color usage rules when developing UI components
+alwaysApply: false
+---
+# Color Usage Guidelines
+
+## Primary Color Palette
+
+### Main Colors
+- **Primary Blue**: `#0F37E6` - Use for primary actions, links, and key UI elements
+- **Secondary Orange**: `#E6530F` - Use for secondary actions, highlights, and accent elements
+- **White**: `#ffffff` - Use for backgrounds, text on dark surfaces, and clean sections
+- **Dark**: `#141417` - Use for dark backgrounds, text on light surfaces, and contrast elements
+
+### Primary Color Variations
+- **Light Blue**: `#e6e7fe` - Use for subtle backgrounds, hover states, and light accents
+- **Medium Blue**: `#5464fb` - Use for secondary buttons, borders, and intermediate elements
+- **Dark Blue**: `#010b49` - Use for dark text on light backgrounds, headers, and strong contrast
+
+### Secondary Color Variations
+- **Dark Orange**: `#3f1101` - Use for dark text on light backgrounds, strong contrast elements
+- **Light Orange**: `#ffedeb` - Use for subtle backgrounds, hover states, and light accents
+
+### Neutral Colors
+- **Light Gray**: `#e9e9ea` - Use for borders, dividers, and subtle separations
+
+## Logo and Brand Identity
+
+### Logo Color Usage
+The logo is composed of the two main brand colors with gradient effects:
+- **Logo Blue**: `#0F37E6` (solid blue circle)
+- **Logo Orange**: `#E6530F` with gradient (lighter orange to deeper orange)
+- **Logo Gradient**: Orange transitions from lighter yellowish-orange to deeper reddish-orange
+
+### Brand Gradient Guidelines
+When using gradients that reference the logo:
+- **Primary Gradient**: Blue to Orange (`#0F37E6` to `#E6530F`)
+- **Orange Gradient**: Light orange to dark orange (use color variations)
+- **Blue Gradient**: Light blue to dark blue (use color variations)
+
+#### CSS Gradient Examples
+```css
+/* Logo-inspired gradient */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #0F37E6 0%, #E6530F 100%);
+}
+
+/* Orange gradient (logo style) */
+.bg-orange-gradient {
+  background: linear-gradient(135deg, #ffedeb 0%, #E6530F 100%);
+}
+
+/* Blue gradient */
+.bg-blue-gradient {
+  background: linear-gradient(135deg, #e6e7fe 0%, #0F37E6 100%);
+}
+```
+
+## Usage Guidelines
+
+### Color Hierarchy
+1. **Primary Blue (#0F37E6)** - Main brand color for:
+   - Primary buttons and CTAs
+   - Active navigation states
+   - Key interactive elements
+   - Brand highlights
+   - Logo elements
+
+2. **Secondary Orange (#E6530F)** - Accent color for:
+   - Secondary buttons
+   - Warning states
+   - Highlights and badges
+   - Complementary actions
+   - Logo elements
+
+3. **Dark (#141417)** - Text and contrast for:
+   - Primary text on light backgrounds
+   - Headers and titles
+   - Dark mode elements
+
+4. **White (#ffffff)** - Backgrounds and text for:
+   - Light backgrounds
+   - Text on dark surfaces
+   - Clean, minimal sections
+
+### Logo-Inspired Design Elements
+- Use the blue-orange gradient for hero sections
+- Apply logo colors to key interactive elements
+- Maintain the visual connection to the brand identity
+- Use solid colors for smaller elements, gradients for larger areas
+
+### Color Combinations
+
+#### Recommended Combinations
+- **Primary Blue + White**: High contrast, professional
+- **Secondary Orange + Dark**: Warm, attention-grabbing
+- **Light Blue + Dark Blue**: Subtle, sophisticated
+- **White + Dark**: Clean, readable
+- **Blue-Orange Gradient**: Brand-consistent, dynamic
+
+#### Logo-Aware Combinations
+- **Logo Gradient + White Text**: High impact, brand-focused
+- **Solid Blue + Orange Accent**: Balanced, professional
+- **Orange Gradient + Dark Text**: Warm, engaging
+
+#### Avoid These Combinations
+- Primary Blue + Secondary Orange (too vibrant when solid)
+- Dark Orange + Dark (poor contrast)
+- Light Orange + White (insufficient contrast)
+
+### Implementation Guidelines
+
+#### CSS Variables
+```css
+:root {
+  --color-primary: #0F37E6;
+  --color-secondary: #E6530F;
+  --color-white: #ffffff;
+  --color-dark: #141417;
+  --color-primary-light: #e6e7fe;
+  --color-primary-medium: #5464fb;
+  --color-primary-dark: #010b49;
+  --color-secondary-dark: #3f1101;
+  --color-secondary-light: #ffedeb;
+  --color-neutral: #e9e9ea;
+  
+  /* Logo gradients */
+  --gradient-brand: linear-gradient(135deg, #0F37E6 0%, #E6530F 100%);
+  --gradient-orange: linear-gradient(135deg, #ffedeb 0%, #E6530F 100%);
+  --gradient-blue: linear-gradient(135deg, #e6e7fe 0%, #0F37E6 100%);
+}
+```
+
+#### Tailwind CSS Classes
+```css
+/* Primary Colors */
+.text-primary { color: #0F37E6; }
+.bg-primary { background-color: #0F37E6; }
+.border-primary { border-color: #0F37E6; }
+
+/* Secondary Colors */
+.text-secondary { color: #E6530F; }
+.bg-secondary { background-color: #E6530F; }
+.border-secondary { border-color: #E6530F; }
+
+/* Brand Gradients */
+.bg-brand-gradient { background: linear-gradient(135deg, #0F37E6 0%, #E6530F 100%); }
+.bg-orange-gradient { background: linear-gradient(135deg, #ffedeb 0%, #E6530F 100%); }
+.bg-blue-gradient { background: linear-gradient(135deg, #e6e7fe 0%, #0F37E6 100%); }
+
+/* Neutral Colors */
+.text-dark { color: #141417; }
+.bg-white { background-color: #ffffff; }
+.border-neutral { border-color: #e9e9ea; }
+```
+
+### Accessibility Guidelines
+
+#### Contrast Ratios
+- Ensure minimum 4.5:1 contrast ratio for normal text
+- Ensure minimum 3:1 contrast ratio for large text
+- Test color combinations with accessibility tools
+- Be extra careful with gradient text - ensure sufficient contrast
+
+#### Color Blind Considerations
+- Don't rely solely on color to convey information
+- Use icons, text, or patterns alongside color
+- Test with color blindness simulators
+- The blue-orange combination is generally color-blind friendly
+
+### Component-Specific Usage
+
+#### Buttons
+- **Primary Button**: Background `#0F37E6`, text `#ffffff`
+- **Secondary Button**: Background `#E6530F`, text `#ffffff`
+- **Gradient Button**: Brand gradient background, white text
+- **Outline Button**: Border `#0F37E6`, text `#0F37E6`, background transparent
+
+#### Navigation
+- **Active State**: `#0F37E6`
+- **Hover State**: `#5464fb`
+- **Default State**: `#141417`
+- **Logo Area**: Can use brand gradient or solid colors
+
+#### Cards and Sections
+- **Light Background**: `#ffffff` with `#e9e9ea` borders
+- **Dark Background**: `#141417` with `#0F37E6` accents
+- **Accent Background**: `#e6e7fe` for subtle highlights
+- **Hero Sections**: Brand gradient backgrounds work well
+
+#### Logo Integration
+- **Logo Background**: White or transparent
+- **Logo on Dark**: Use white or light variations
+- **Logo on Light**: Use original colors or dark variations
+- **Logo with Gradient**: Ensure sufficient contrast
+
+### Responsive Considerations
+- Maintain color consistency across all screen sizes
+- Ensure touch targets have sufficient contrast
+- Consider how colors appear on different devices and screens
+- Gradients should remain readable at all sizes
+
+### Brand Consistency
+- Always use the exact hex values provided
+- Don't modify colors without approval
+- Maintain consistent usage across all components
+- Document any new color additions to this palette
+- Keep logo colors prominent in key brand touchpoints
+- Use gradients sparingly but effectively for brand impact
