@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import WhoWeServe from "@/components/landing/WhoWeServe";
 
 export default function AppHeader() {
     return (

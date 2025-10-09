@@ -3,9 +3,9 @@
 import DemoSection from "@/components/common/DemoSection";
 import AppFooter from "@/components/layout/AppFooter";
 import AppHeader from "@/components/layout/AppHeader";
-import WhoWeServe from "@/components/landing/WhoWeServe";
 import SpeechAnalysisSection from "@/components/landing/SpeechAnalysisSection";
 import FeatureCard from "@/components/landing/FeatureCard";
+import WorkflowSection from "@/components/landing/WorkflowSection";
 import { FEATURES, type FeatureItem } from "@/lib/constants";
 
 export default function LandingPage() {
@@ -52,13 +52,21 @@ export default function LandingPage() {
     }
   };
 
+
   return (
     <div className="min-h-screen bg-white">
       <AppHeader/>
       
       <div className="mx-auto max-w-6xl px-6 py-10 pt-20">
         {/* Hero Section */}
-        <div className="text-center space-y-8 mt-20">
+        <div 
+          className="text-center space-y-8 mt-10"
+          style={{
+            animation: 'fadeInUp 0.6s ease-out forwards',
+            opacity: 0,
+            transform: 'translateY(20px)'
+          }}
+        >
           <h1 className="text-6xl font-bold text-gray-900 sm:text-8xl">
             <span style={{ color: "#0f37e6" }}>Master Your Voice,</span>
             <br />
@@ -72,34 +80,19 @@ export default function LandingPage() {
         {/* Demo Section */}
         <DemoSection/>
 
-        {/* Transform Section */}
-        <div className="mt-8 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-12 transition-transform duration-300 hover:scale-105">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900">
-                Great speeches don&apos;t just happen.
-                <br />
-                They are
-                <span style={{ color: "#0f37e6" }}> built. </span>
-              </h2>
-              <div className="space-y-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                <p className="italic">
-                  &quot;Get inspired, craft your lines, and practice with AI-powered roleplay.
-                  Then, receive instant, personalized feedback to level up fast.
-                </p>
-                <p className="italic">
-                  Retoria adapts to your style and goals—whether you need sharper delivery, stronger storytelling, or more persuasive impact.
-                  From writing to practice to performance, it helps you grow in every dimension of public speaking, so every time you step up,
-                  you sound sharp, confident, and unforgettable.&quot;
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Workflow Section */}
+        <WorkflowSection />
 
         {/* Features Section */}
-        <div className="mt-20 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-12">
-          <div className="text-center mb-5">
+        <div className="mt-5 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-12">
+          <div 
+            className="text-center mb-5"
+            style={{
+              animation: 'fadeInUp 0.6s ease-out forwards',
+              opacity: 0,
+              transform: 'translateY(20px)'
+            }}
+          >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Enter Retoria:
               <span style={{ color: "#0f37e6" }}> Your AI Speech Coach </span>
@@ -127,7 +120,14 @@ export default function LandingPage() {
         <div className="mx-auto max-w-6xl px-6 py-10">
         {/* Comparison Table Section */}
         <div className="mt-5 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-8 max-w-6xl mx-auto transition-transform duration-300 hover:scale-105">
-          <div className="text-center mb-12">
+          <div 
+            className="text-center mb-12"
+            style={{
+              animation: 'fadeInUp 0.6s ease-out forwards',
+              opacity: 0,
+              transform: 'translateY(20px)'
+            }}
+          >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Why
               <span style={{ color: "#0f37e6" }}> Retoria </span>
@@ -274,7 +274,14 @@ export default function LandingPage() {
 
       {/* Final Demo Section (full-bleed) */}
       <div className="mt-10 text-white" style={{ backgroundColor: "#0f37e6" }}>
-          <div className="text-center py-12">
+          <div 
+            className="text-center py-12"
+            style={{
+              animation: 'fadeInUp 0.6s ease-out forwards',
+              opacity: 0,
+              transform: 'translateY(20px)'
+            }}
+          >
             <h2 className="text-5xl font-bold text-white mb-4 mt-15">Ready to Level-Up Your Delivery?</h2>
             <p className="text-indigo-100">Schedule a demo with our team today!</p>
             <DemoSection variant="indigo" className="py-6" />

@@ -80,7 +80,14 @@ export default function DemoSection({ className = "", variant = "light" }: DemoS
         : "w-full bg-[#0f37e6] text-white py-2 px-4 rounded-lg font-semibold hover:opacity-90 focus:ring-2 focus:ring-[#0f37e6] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm";
 
     return (
-        <div className={containerClasses}>
+        <div 
+          className={containerClasses}
+          style={{
+            animation: 'fadeInUpSmooth 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+            opacity: 0,
+            transform: 'translateY(30px) scale(0.95)'
+          }}
+        >
                 {!isSubmitted && !isDuplicate ? (
                     <form onSubmit={handleDemoSubmit} className="space-y-3">
                         <div>
