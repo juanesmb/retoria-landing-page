@@ -2,6 +2,7 @@
 
 import DemoSection from "@/components/common/DemoSection";
 import AppFooter from "@/components/layout/AppFooter";
+import AppHeader from "@/components/layout/AppHeader";
 import WhoWeServe from "@/components/landing/WhoWeServe";
 import SpeechAnalysisSection from "@/components/landing/SpeechAnalysisSection";
 import FeatureCard from "@/components/landing/FeatureCard";
@@ -53,8 +54,10 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-10">
-        {/* Who We Serve */}
+      <AppHeader/>
+      
+      <div className="mx-auto max-w-6xl px-6 py-10 pt-20">
+          {/* Who We Serve */}
         <div>
            <WhoWeServe />
         </div>
