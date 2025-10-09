@@ -67,7 +67,7 @@ export default function DemoSection({ className = "", variant = "light" }: DemoS
 
     const containerClasses = isIndigo
         ? `bg-transparent rounded-none shadow-none p-8 max-w-xl mx-auto ${className}`
-        : `bg-gradient-to-r from-indigo-50 to-blue-80 rounded-2xl shadow-xl p-6 max-w-xl mx-auto ${className}`;
+        : `bg-white mt-5 rounded-2xl shadow-none p-6 max-w-xl mx-auto ${className}`;
 
     const subtleText = isIndigo ? "text-indigo-100" : "text-gray-600";
     const strongText = isIndigo ? "text-white" : "text-gray-900";
@@ -81,13 +81,6 @@ export default function DemoSection({ className = "", variant = "light" }: DemoS
 
     return (
         <div className={containerClasses}>
-            <div className="text-center space-y-4">
-                {!isIndigo && (
-                    <p className={`${subtleText} text-sm`}>
-                        Experience AI-powered speech coaching firsthand.
-                    </p>
-                )}
-
                 {!isSubmitted && !isDuplicate ? (
                     <form onSubmit={handleDemoSubmit} className="space-y-3">
                         <div>
@@ -105,7 +98,7 @@ export default function DemoSection({ className = "", variant = "light" }: DemoS
                             disabled={isLoading}
                             className={buttonClasses}
                         >
-                            {isLoading ? "Starting..." : "Book a Demo"}
+                            {isLoading ? "Starting..." : "Join Waitlist"}
                         </button>
                     </form>
                 ) : isDuplicate ? (
@@ -145,7 +138,6 @@ export default function DemoSection({ className = "", variant = "light" }: DemoS
                         </button>
                     </div>
                 )}
-            </div>
         </div>
     );
 }

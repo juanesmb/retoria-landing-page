@@ -57,28 +57,23 @@ export default function LandingPage() {
       <AppHeader/>
       
       <div className="mx-auto max-w-6xl px-6 py-10 pt-20">
-          {/* Who We Serve */}
-        <div>
-           <WhoWeServe />
-        </div>
-
         {/* Hero Section */}
-        <div className="text-center space-y-8 mt-10">
-          <h1 className="text-5xl font-bold text-gray-900 sm:text-6xl">
+        <div className="text-center space-y-8 mt-20">
+          <h1 className="text-6xl font-bold text-gray-900 sm:text-8xl">
             <span style={{ color: "#0f37e6" }}>Master Your Voice,</span>
             <br />
             Command the Room
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your all-in-one AI speech coach. From idea to delivery.
+          <p className="text-xl sm:text-2xl max-w-3xl mx-auto" style={{ color: "#141417" }}>
+            Your all-in-one AI speech coach. <br/> From idea to delivery.
           </p>
         </div>
 
         {/* Demo Section */}
-        <DemoSection className="mt-10" />
+        <DemoSection/>
 
         {/* Transform Section */}
-        <div className="mt-20 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-12 transition-transform duration-300 hover:scale-105">
+        <div className="mt-8 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl shadow-xl p-12 transition-transform duration-300 hover:scale-105">
           <div className="max-w-4xl mx-auto">
             <div className="text-center space-y-6">
               <h2 className="text-3xl font-bold text-gray-900">

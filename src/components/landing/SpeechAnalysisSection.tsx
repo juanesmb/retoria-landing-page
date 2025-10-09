@@ -51,7 +51,7 @@ export default function SpeechAnalysisSection() {
     >
       <div className="mx-auto max-w-5xl py-10 sm:py-8">
         <h2 className="mt-4 text-center text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-          Retoria analyzes your delivery. So you can focus on what matters.
+            Level-up Your Speech Like Never Before
         </h2>
 
         <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
