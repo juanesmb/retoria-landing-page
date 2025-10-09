@@ -54,7 +54,17 @@ export default function SpeechAnalysisSection() {
           Retoria analyzes your delivery. So you can focus on what matters.
         </h2>
 
-        <div className="mt-10 flex justify-center md:ml-60">
+        <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <img 
+              src="/logo_white.png"
+              alt="Retoria Logo" 
+              className="w-32 h-32 md:w-40 md:h-40 object-contain"
+            />
+          </div>
+          
+          {/* Dynamic List */}
           <div
             className="relative max-w-[calc(100vw-2rem)] mx-4 w-[300px] md:w-[500px] overflow-hidden select-none"
             style={{
