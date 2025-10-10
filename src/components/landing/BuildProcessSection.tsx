@@ -1,7 +1,5 @@
 "use client";
 
-import ProcessCard from "./ProcessCard";
-
 const processIconFor = (step: number) => {
   switch (step) {
     case 1: // Plan
@@ -32,62 +30,3 @@ const processIconFor = (step: number) => {
       return null;
   }
 };
-
-export default function WorkflowSection() {
-  return (
-    <div className="mt-8 bg-white rounded-2xl p-12 transition-transform duration-300">
-      <div className="max-w-6xl mx-auto">
-        <div 
-          className="text-center mb-12"
-          style={{
-            animation: 'fadeInUpSmooth 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
-            opacity: 0,
-            transform: 'translateY(30px) scale(0.95)'
-          }}
-        >
-          <h2 className="text-3xl font-bold text-gray-900">
-            Great speeches don&apos;t just happen.
-            <br />
-            They are
-            <span style={{ color: "#0F37E6" }}> prepared. </span>
-          </h2>
-        </div>
-        
-        {/* Process Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-          <ProcessCard
-            step={1}
-            title="Plan"
-            description="Define your goals, audience, delivery date, and speech type"
-            icon={processIconFor(1)}
-            delay={0}
-          />
-          
-          <ProcessCard
-            step={2}
-            title="Roleplay"
-            description="Practice in realistic scenarios with interactive AI conversations"
-            icon={processIconFor(2)}
-            delay={200}
-          />
-          
-          <ProcessCard
-            step={3}
-            title="Receive Feedback"
-            description="Get instant analysis on your delivery, clarity, pace, engagement, filler words, and more"
-            icon={processIconFor(3)}
-            delay={400}
-          />
-          
-          <ProcessCard
-            step={4}
-            title="Deliver"
-            description="Step up with confidence and deliver an unforgettable speech"
-            icon={processIconFor(4)}
-            delay={600}
-          />
-        </div>
-      </div>
-    </div>
-  );
-}

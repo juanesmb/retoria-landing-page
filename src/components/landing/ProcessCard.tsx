@@ -50,7 +50,7 @@ export default function ProcessCard({
   return (
     <div 
       ref={cardRef}
-      className="relative bg-white rounded-2xl p-6 text-center space-y-4 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg border border-gray-200"
+      className="relative bg-white rounded-2xl p-6 text-center space-y-4 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg"
       style={{
         animation: isVisible ? 'fadeInUpSmooth 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards' : 'none',
         opacity: isVisible ? 1 : 0,
@@ -71,7 +71,7 @@ export default function ProcessCard({
       </div>
       
       {/* Description */}
-      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+      <p className="text-sm leading-relaxed" style={{color: "#141417"}}>{description}</p>
     </div>
   );
 }

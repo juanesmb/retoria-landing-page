@@ -45,7 +45,7 @@ export default function WorkflowSection() {
             transform: 'translateY(30px) scale(0.95)'
           }}
         >
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold" style={{color: "#141417"}}>
             Great speeches don&apos;t just happen.
             <br />
             They are
@@ -66,15 +66,15 @@ export default function WorkflowSection() {
           <ProcessCard
             step={2}
             title="Roleplay"
-            description="Practice in realistic scenarios with interactive AI conversations"
+            description="Practice with AI-powered scenarios and conversations to build confidence and refine your delivery in realistic situations."
             icon={processIconFor(2)}
             delay={200}
           />
           
           <ProcessCard
             step={3}
-            title="Receive Feedback"
-            description="Get instant analysis on your delivery, clarity, pace, engagement, filler words, and more"
+            title="Get Feedback"
+            description="Get instant analysis on your delivery. Spot weaknesses you never noticed and transform them into strengths."
             icon={processIconFor(3)}
             delay={400}
           />
