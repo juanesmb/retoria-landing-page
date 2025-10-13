@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 type Item = { id: string; label: string };
@@ -57,10 +58,13 @@ export default function SpeechAnalysisSection() {
         <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img
+            <Image
               src="/logo_white.svg"
               alt="Retoria Logo"
+              width={160}
+              height={160}
               className="w-32 h-32 md:w-40 md:h-40 object-contain"
+              priority
             />
           </div>
 

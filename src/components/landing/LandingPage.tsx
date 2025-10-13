@@ -139,7 +139,7 @@ export default function LandingPage() {
                                 <FeatureCard
                                     key={feature.iconKey}
                                     icon={iconFor(feature.iconKey)}
-                                    description={feature.description} title={""}
+                                    description={feature.description}
                                 />
                             ))}
                         </div>

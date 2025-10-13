@@ -4,11 +4,10 @@ import type {ReactNode} from "react";
 
 type FeatureCardProps = {
     icon: ReactNode;
-    title: string;
     description: ReactNode;
 };
 
-export default function FeatureCard({icon, title, description}: FeatureCardProps) {
+export default function FeatureCard({icon, description}: FeatureCardProps) {
     return (
         <div
             className="rounded-2xl p-4 text-center space-y-4 transition-transform duration-300 hover:scale-105 hover:shadow-lg"

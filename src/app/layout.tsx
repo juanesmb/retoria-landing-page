@@ -24,8 +24,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-  const isDebug = process.env.NEXT_PUBLIC_GA_DEBUG === 'true';
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID?.trim();
+  const isDebug = process.env.NEXT_PUBLIC_GA_DEBUG === "true";
+
+  if (!GA_ID && process.env.NODE_ENV === "development") {
+    console.warn("Google Analytics ID is missing. Analytics scripts will not load.");
+  }
 
   return (
     <html lang="en">
@@ -46,7 +50,7 @@ export default function RootLayout({
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${GA_ID}', {
-                  debug_mode: ${isDebug}
+                  debug_mode: ${JSON.stringify(isDebug)}
                 });
               `}
             </Script>

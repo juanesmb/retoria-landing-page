@@ -36,13 +36,15 @@ export default function ProcessCard({
       }
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
+    const current = cardRef.current;
+
+    if (current) {
+      observer.observe(current);
     }
 
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
+      if (current) {
+        observer.unobserve(current);
       }
     };
   }, [delay]);
