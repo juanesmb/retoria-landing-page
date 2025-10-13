@@ -8,11 +8,12 @@ declare global {
   }
 
   interface Window {
-    gtag:
-      | ((command: "js", date: Date) => void)
-      | ((command: "config", targetId: string, config?: GtagConfigParams) => void)
-      | ((command: "event", eventName: string, params?: GtagCustomParams) => void)
-      | ((command: "set", params: GtagCustomParams) => void);
+    gtag: {
+      (command: "js", date: Date): void;
+      (command: "config", targetId: string, config?: GtagConfigParams): void;
+      (command: "event", eventName: string, params?: GtagCustomParams): void;
+      (command: "set", params: GtagCustomParams): void;
+    };
     dataLayer: GtagCustomParams[];
   }
 }
