@@ -147,7 +147,7 @@ export default function LandingPage() {
                 </div>
             </div>
 
-            {/* Final Demo Section (full-bleed) */}
+            {/* Final CTA Section (full-bleed) */}
             <div className="mt-10 text-white" style={{backgroundColor: "#0f37e6"}}>
                 <div
                     className="text-center py-12"
@@ -158,7 +158,7 @@ export default function LandingPage() {
                     }}
                 >
                     <h2 className="text-5xl font-bold text-white mb-4 mt-15">Ready to Level-Up Your Delivery?</h2>
-                    <p className="text-indigo-100">Schedule a demo with our team today!</p>
+                    <p className="text-indigo-100">Join the waitlist and be the first to experience Retoria!</p>
                     <DemoSection variant="indigo" className="py-6"/>
                 </div>
                 {/* Curved white divider */}
