@@ -48,6 +48,16 @@ export default function DemoSection({ className = "", variant = "light" }: DemoS
             }
 
             // console.log('Demo signup successful:', responseData);
+            
+            // Track successful email capture in Google Analytics
+            if (typeof window !== 'undefined' && window.gtag) {
+                window.gtag('event', 'generate_lead', {
+                    event_category: 'engagement',
+                    event_label: 'demo_waitlist_signup',
+                    value: 1
+                });
+            }
+            
             setIsSubmitted(true);
         } catch (error) {
             // console.error('Demo signup error:', error);

@@ -25,6 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+  const isDebug = process.env.NEXT_PUBLIC_GA_DEBUG === 'true';
 
   return (
     <html lang="en">
@@ -44,7 +45,9 @@ export default function RootLayout({
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${GA_ID}');
+                gtag('config', '${GA_ID}', {
+                  debug_mode: ${isDebug}
+                });
               `}
             </Script>
           </>
