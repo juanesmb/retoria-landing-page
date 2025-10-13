@@ -14,13 +14,13 @@ export default function AppFooter() {
           <div className="flex items-center space-x-8">
             <Link 
               href="/about" 
-              className="text-sm text-gray-400 hover:text-white transition-colors"
+              className="text-sm text-gray-400 hover:text-black transition-colors"
             >
               About us
             </Link>
             <a 
               href="mailto:contact@retoria.com" 
-              className="text-sm text-gray-400 hover:text-white transition-colors"
+              className="text-sm text-gray-400 hover:text-black transition-colors"
             >
               Contact us
             </a>
@@ -32,7 +32,7 @@ export default function AppFooter() {
               href="https://linkedin.com/company/retoria"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-black transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -43,7 +43,7 @@ export default function AppFooter() {
               href="https://youtube.com/@retoria"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover:text-black transition-colors"
               aria-label="YouTube"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

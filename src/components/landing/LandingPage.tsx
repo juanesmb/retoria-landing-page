@@ -7,6 +7,7 @@ import AppHeader from "@/components/layout/AppHeader";
 import SpeechAnalysisSection from "@/components/landing/SpeechAnalysisSection";
 import FeatureCard from "@/components/landing/FeatureCard";
 import WorkflowSection from "@/components/landing/WorkflowSection";
+import WhoWeServe from "@/components/landing/WhoWeServe";
 import {FEATURES, type FeatureItem} from "@/lib/constants";
 
 export default function LandingPage() {
@@ -49,13 +50,18 @@ export default function LandingPage() {
             <div className="mx-auto max-w-6xl px-6 py-10 pt-20">
                 {/* Hero Section */}
                 <div
-                    className="text-center space-y-8 mt-10"
+                    className="text-center space-y-8 mt-3"
                     style={{
                         animation: 'fadeInUp 0.6s ease-out forwards',
                         opacity: 0,
                         transform: 'translateY(20px)'
                     }}
                 >
+                    {/* Who We Serve Section */}
+                    <div className="max-w-3xl mx-auto mb-8">
+                        <WhoWeServe />
+                    </div>
+
                     <h1 className="text-6xl font-bold text-gray-900 sm:text-8xl">
                         <span style={{color: "#0f37e6"}}>Master Your Voice,</span>
                         <br/>
@@ -79,7 +85,7 @@ export default function LandingPage() {
             </div>
 
             {/* Logo Section */}
-            <div className="flex justify-center items-center py-16">
+            <div className="flex justify-center items-center py-10">
                 <div
                     className="flex justify-center items-center"
                     style={{
@@ -89,7 +95,7 @@ export default function LandingPage() {
                     }}
                 >
                     <Image
-                        src="/logo.png"
+                        src="/logo.svg"
                         alt="Retoria Logo"
                         width={200}
                         height={200}
@@ -100,8 +106,8 @@ export default function LandingPage() {
             </div>
 
             {/* Features Section */}
-            <div className="mx-auto max-w-6xl px-6 py-10">
-                <div className="rounded-2xl p-12">
+            <div className="mx-auto max-w-6xl px-6">
+                <div className="rounded-2xl px-12 py-6">
                     <div className="flex flex-col lg:flex-row items-center gap-12">
                         {/* Title on the left */}
                         <div
@@ -131,7 +137,7 @@ export default function LandingPage() {
                         <div className="flex-2 grid grid-cols-1 md:grid-cols-3 gap-8">
                             {FEATURES.map((feature) => (
                                 <FeatureCard
-                                    key={feature.description}
+                                    key={feature.iconKey}
                                     icon={iconFor(feature.iconKey)}
                                     description={feature.description} title={""}
                                 />

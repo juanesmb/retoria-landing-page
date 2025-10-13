@@ -5,7 +5,7 @@ import type {ReactNode} from "react";
 type FeatureCardProps = {
     icon: ReactNode;
     title: string;
-    description: string;
+    description: ReactNode;
 };
 
 export default function FeatureCard({icon, title, description}: FeatureCardProps) {

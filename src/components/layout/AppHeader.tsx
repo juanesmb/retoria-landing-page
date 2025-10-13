@@ -7,7 +7,7 @@ export default function AppHeader() {
             <div className="mx-auto max-w-6xl px-6 py-2 bg-white/50 backdrop-blur-md rounded-b-xl">
                 <Link href="/" className="inline-block">
                     <Image
-                        src="/logo_and_name.png"
+                        src="/logo_and_name.svg"
                         alt="Retoria Logo"
                         width={120}
                         height={50}

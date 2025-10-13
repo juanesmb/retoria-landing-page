@@ -7,8 +7,9 @@ const ROTATE_MS = 2500;
 type Archetype = { emoji: string; head: string; tail: string };
 
 const archetypes: Archetype[] = [
+  { emoji: "💼", head: "Sales Reps", tail: " mastering pitches and closing deals." },
   { emoji: "🚀", head: "Entrepreneurs", tail: " pitching investors." },
-  { emoji: "🧑‍💼", head: "Professionals & Leaders", tail: " seeking influence and presence." },
+  { emoji: "👨‍💼", head: "Professionals & Leaders", tail: " seeking influence and presence." },
   { emoji: "🎯", head: "Job Seekers", tail: " preparing for high-stakes interviews." },
   { emoji: "🎓", head: "Students", tail: " striving for academic and competition success." },
   { emoji: "✨", head: "Anyone", tail: " who wants to communicate better, inspire others, and leave an impact." },
