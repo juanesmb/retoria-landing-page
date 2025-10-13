@@ -19,7 +19,7 @@ export default function AppFooter() {
               About us
             </Link>
             <a 
-              href="mailto:contact@retoria.com" 
+              href="mailto:juan@retoria.coach"
               className="text-sm text-gray-400 hover:text-black transition-colors"
             >
               Contact us
@@ -29,7 +29,7 @@ export default function AppFooter() {
           {/* Social Media Links */}
           <div className="flex items-center space-x-4">
             <a
-              href="https://linkedin.com/company/retoria"
+              href="https://www.linkedin.com/company/retoria-ai-speech-coach"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-black transition-colors"
