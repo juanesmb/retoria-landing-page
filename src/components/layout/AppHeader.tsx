@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PracticeNowButton from "@/components/common/PracticeNowButton";
 
 export default function AppHeader() {
     return (
@@ -16,13 +17,7 @@ export default function AppHeader() {
                             priority
                         />
                     </Link>
-                    <a
-                        href="https://app.retoria.coach"
-                        className="px-4 py-2 rounded-lg text-white font-medium transition-all duration-200 hover:opacity-90 active:translate-y-[1px] shadow-lg"
-                        style={{ backgroundColor: "#0f37e6" }}
-                    >
-                        Practice Now
-                    </a>
+                    <PracticeNowButton />
                 </div>
             </div>
         </header>

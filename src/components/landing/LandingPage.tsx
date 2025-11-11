@@ -1,14 +1,45 @@
 "use client";
 
 import Image from "next/image";
-import DemoSection from "@/components/common/DemoSection";
 import AppFooter from "@/components/layout/AppFooter";
 import AppHeader from "@/components/layout/AppHeader";
 import SpeechAnalysisSection from "@/components/landing/SpeechAnalysisSection";
 import FeatureCard from "@/components/landing/FeatureCard";
 import WorkflowSection from "@/components/landing/WorkflowSection";
 import WhoWeServe from "@/components/landing/WhoWeServe";
+import PracticeNowButton from "@/components/common/PracticeNowButton";
 import {FEATURES, type FeatureItem} from "@/lib/constants";
+
+export function ArcadeEmbed() {
+    return (
+        <>
+            {/* Mobile Embed - visible on phone-sized screens */}
+            <div className="block md:hidden" style={{ position: 'relative', maxHeight: 'calc(70vh + 41px)', aspectRatio: '0.5622188905547226', margin: '0 auto' }}>
+                <iframe
+                    src="https://demo.arcade.software/QjOBRIR1MAIorNSzGiEa?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true"
+                    title="Practice and Analyze Your Elevator Pitch Delivery"
+                    frameBorder="0"
+                    loading="lazy"
+                    allowFullScreen
+                    allow="clipboard-write"
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', colorScheme: 'light' }}
+                />
+            </div>
+            {/* Desktop Embed - visible on larger screens */}
+            <div className="hidden md:block" style={{ position: 'relative', paddingBottom: 'calc(85.07462686567165% + 41px)', height: '0', width: '100%' }}>
+                <iframe
+                    src="https://demo.arcade.software/J9W5JHC1ZpLqgOOaHF4W?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true"
+                    title="Watch how to practice your elevator pitch using Retoria"
+                    frameBorder="0"
+                    loading="lazy"
+                    allowFullScreen
+                    allow="clipboard-write"
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', colorScheme: 'light' }}
+                />
+            </div>
+        </>
+    );
+}
 
 export default function LandingPage() {
     const iconFor = (key: FeatureItem["iconKey"]) => {
@@ -72,8 +103,10 @@ export default function LandingPage() {
                     </p>
                 </div>
 
-                {/* Demo Section */}
-                <DemoSection/>
+                {/* Arcade Embed Section */}
+                <div className="mt-12 mb-12 max-w-3xl mx-auto">
+                    <ArcadeEmbed />
+                </div>
 
                 {/* Workflow Section */}
                 <WorkflowSection/>
@@ -158,8 +191,8 @@ export default function LandingPage() {
                     }}
                 >
                     <h2 className="text-5xl font-bold text-white mb-4 mt-15">Ready to Level-Up Your Delivery?</h2>
-                    <p className="text-indigo-100">Join the waitlist and be the first to experience Retoria!</p>
-                    <DemoSection variant="indigo" className="py-6"/>
+                    <p className="text-indigo-100 mb-6">Start practicing now and transform your speech delivery!</p>
+                    <PracticeNowButton variant="inverse" className="inline-block" />
                 </div>
                 {/* Curved white divider */}
                 <svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"
